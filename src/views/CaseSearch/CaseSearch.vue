@@ -27,7 +27,9 @@
         <el-table :data="filteredCases" style="width: 100%">
           <el-table-column prop="name" label="案件名称"></el-table-column>
           <el-table-column prop="number" label="案件编号"></el-table-column>
-          <el-table-column prop="type" label="案件类型"></el-table-column>
+          <el-table-column prop="basis" label="处罚依据"></el-table-column>
+          <el-table-column prop="decision" label="处罚决定"></el-table-column>
+          <el-table-column prop="organName" label="机构名称"></el-table-column>
           <!-- 可以根据返回数据的内容添加更多列 -->
         </el-table>
       </Content>
@@ -57,16 +59,16 @@
         let params = { penaltyId: this.searchInput }; // 根据需要调整参数
         switch (this.searchType) {
           case 'basis':
-            getSimilarCasesByBasis(params).then(response => this.cases = response.data);
+            getSimilarCasesByBasis(params).then(response => this.filteredCases=response);
             break;
           case 'fine':
-            getSimilarCasesByFine(params).then(response => this.cases = response.data);
+            getSimilarCasesByFine(params).then(response => this.filteredCases = response);
             break;
           case 'partyName':
-            getSimilarCasesByPartyName(params).then(response => this.cases = response.data);
+            getSimilarCasesByPartyName(params).then(response => this.filteredCases = response);
             break;
           case 'organName':
-            getSimilarCasesByOrganName(params).then(response => this.cases = response.data);
+            getSimilarCasesByOrganName(params).then(response => this.filteredCases = response);
             break;
         }
       },

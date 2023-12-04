@@ -27,6 +27,12 @@ const routes = [
         name: "trend",
         component: () => import("@/views/Trend/Trend"),
       },
+      {
+         // 类案检索
+         path: "/case-search",
+         name: "CaseSearch",
+         component: () => import("@/views/CaseSearch/CaseSearch"),
+       }
     ],
   },
   {
@@ -58,12 +64,6 @@ const routes = [
         path: "/violation",
         name: "Violation",
         component: () => import("@/views/Violation/Violation"),
-      },
-      {
-        // 类案检索
-        path: "/case-search",
-        name: "CaseSearch",
-        component: () => import("@/views/CaseSearch/CaseSearch"),
       },
     ],
   },

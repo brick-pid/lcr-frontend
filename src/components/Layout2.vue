@@ -64,11 +64,6 @@
               <Icon type="ios-analytics"></Icon>
               趋势分析
             </MenuItem>
-            <!-- 新添加的菜单项 -->
-            <MenuItem name="4" to="/case-search">
-              <Icon type="ios-search"></Icon>
-              类案检索
-            </MenuItem>
           </div>
         </Menu>
       </Header>

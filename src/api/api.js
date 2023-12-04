@@ -3,6 +3,7 @@ const api = {
   pre: "penalty",
   pre1: "match",
   pre2: "policy",
+  pre3: "similarity"
 };
 
 export function queryByPenaltyIdAPI(ByPenaltyId) {
@@ -263,7 +264,7 @@ export function getTrendAPI(params) {
  */
 export function getSimilarCasesByBasis(params) {
   return axios({
-    url: `http://localhost:8080/similarity/calByBasis`,
+    url: `${api.pre3}/calByBasis`,
     method: "get",
     params,
   });
@@ -274,7 +275,7 @@ export function getSimilarCasesByBasis(params) {
  */
 export function getSimilarCasesByFine(params) {
   return axios({
-    url: `http://localhost:8080/similarity/calByFine`,
+    url: `${api.pre3}/calByFine`,
     method: "get",
     params,
   });
@@ -285,7 +286,7 @@ export function getSimilarCasesByFine(params) {
  */
 export function getSimilarCasesByPartyName(params) {
   return axios({
-    url: `http://localhost:8080/similarity/calByPartyName`,
+    url: `${api.pre3}/calByPartyName`,
     method: "get",
     params,
   });
@@ -296,7 +297,7 @@ export function getSimilarCasesByPartyName(params) {
  */
 export function getSimilarCasesByOrganName(params) {
   return axios({
-    url: `http://localhost:8080/similarity/calByOrganName`,
+    url: `${api.pre3}/calByOrganName`,
     method: "get",
     params,
   });
