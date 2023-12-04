@@ -16,10 +16,20 @@
   top: 10px;
   left: 20px;
 }
-.layout-nav{
+/* .layout-nav{
   width: 420px;
   margin: 0 auto;
   margin-right: 20px;
+} */
+.layout-nav {
+  /* Increase the width or make it flexible */
+  width: auto;
+  max-width: 100%; /* or a larger fixed width if necessary */
+  margin: 0 auto;
+  display: flex;         /* 使用 flexbox 布局 */
+  justify-content: flex-end; /* 使内容靠右对齐 */
+  align-items: center;   /* 如果需要，可以垂直居中对齐内容 */
+  margin-right: 20px;    /* 根据需要保持或调整右边距 */
 }
 .layout{
   text-align: initial;
@@ -49,6 +59,11 @@
             <MenuItem name="3" to="/trend">
               <Icon type="ios-analytics"></Icon>
               趋势分析
+            </MenuItem>
+            <!-- 新添加的菜单项 -->
+            <MenuItem name="4" to="/case-search">
+              <Icon type="ios-search"></Icon>
+              类案检索
             </MenuItem>
           </div>
         </Menu>

@@ -2,7 +2,7 @@ import { axios } from "../utils/request";
 const api = {
   pre: "penalty",
   pre1: "match",
-  pre2: "policy"
+  pre2: "policy",
 };
 
 export function queryByPenaltyIdAPI(ByPenaltyId) {
@@ -253,6 +253,50 @@ export function getOrgTypeAmountListAPI() {
 export function getTrendAPI(params) {
   return axios({
     url: `${api.pre}/getAnalysisForTrend`,
+    method: "get",
+    params,
+  });
+}
+
+/**
+ * 通过处罚依据获取相似案例
+ */
+export function getSimilarCasesByBasis(params) {
+  return axios({
+    url: `http://localhost:8080/similarity/calByBasis`,
+    method: "get",
+    params,
+  });
+}
+
+/**
+ * 通过罚金获取相似案例
+ */
+export function getSimilarCasesByFine(params) {
+  return axios({
+    url: `http://localhost:8080/similarity/calByFine`,
+    method: "get",
+    params,
+  });
+}
+
+/**
+ * 通过当事人名称获取相似案例
+ */
+export function getSimilarCasesByPartyName(params) {
+  return axios({
+    url: `http://localhost:8080/similarity/calByPartyName`,
+    method: "get",
+    params,
+  });
+}
+
+/**
+ * 通过机构名称获取相似案例
+ */
+export function getSimilarCasesByOrganName(params) {
+  return axios({
+    url: `http://localhost:8080/similarity/calByOrganName`,
     method: "get",
     params,
   });
